@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SBScrabbleModelStoreContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="SBScrabbleModel.Game">
+        <MappingFragment StoreEntitySet="Game">
+          <ScalarProperty Name="GameID" ColumnName="GameID" />
+          <ScalarProperty Name="Player1" ColumnName="Player1" />
+          <ScalarProperty Name="Player2" ColumnName="Player2" />
+          <ScalarProperty Name="Player1Score" ColumnName="Player1Score" />
+          <ScalarProperty Name="Player2Score" ColumnName="Player2Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="SBScrabbleModel.Member">
+        <MappingFragment StoreEntitySet="Member">
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+          <ScalarProperty Name="Town" ColumnName="Town" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+          <ScalarProperty Name="NumberOfWins" ColumnName="NumberOfWins" />
+          <ScalarProperty Name="NumberOfLosses" ColumnName="NumberOfLosses" />
+          <ScalarProperty Name="AverageScore" ColumnName="AverageScore" />
+          <ScalarProperty Name="HighestScore" ColumnName="HighestScore" />
+          <ScalarProperty Name="HighestScoreDate" ColumnName="HighestScoreDate" />
+          <ScalarProperty Name="HighestScoreLocation" ColumnName="HighestScoreLocation" />
+          <ScalarProperty Name="HighestScoreAgianst" ColumnName="HighestScoreAgianst" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
