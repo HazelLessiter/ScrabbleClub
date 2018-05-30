@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Scrabble.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateJoined)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfWins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfLosses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AverageScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HighestScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HighestScoreDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HighestScoreLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HighestScoreAgianst)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateJoined)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfWins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfLosses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AverageScore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HighestScore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HighestScoreDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HighestScoreLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HighestScoreAgianst)
+        </td>
+    </tr>
+}
+
+</table>
