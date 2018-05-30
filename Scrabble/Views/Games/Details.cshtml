@@ -1,0 +1,50 @@
+﻿@model Scrabble.Models.Game
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Player1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Player2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Player1Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player1Score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Player2Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player2Score)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GameID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
