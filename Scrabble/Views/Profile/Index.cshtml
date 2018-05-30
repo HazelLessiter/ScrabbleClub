@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Scrabble.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form asp-controller="Recipes" asp-action="Index">
+    <p>
+        Search: <input type="text" name="q">
+        <input type="submit" value="Search" />
+    </p>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Name")
+        </th>
+        <th>
+            @Html.DisplayName("DOB")
+        </th>
+        <th>
+            @Html.DisplayName("StreetAddress")
+        </th>
+        <th>
+            @Html.DisplayName("Town")
+        </th>
+        <th>
+            @Html.DisplayName("County")
+        </th>
+        <th>
+            @Html.DisplayName("Postcode")
+        </th>
+        <th>
+            @Html.DisplayName("DateJoined")
+        </th>
+        <th>
+            @Html.DisplayName("NumberOfWns")
+        </th>
+        <th>
+            @Html.DisplayName("NumberOfLosses")
+        </th>
+        <th>
+            @Html.DisplayName("AverageScore")
+        </th>
+        <th>
+            @Html.DisplayName("AverageScoreDate")
+        </th>
+        <th>
+            @Html.DisplayName("AverageScoreLocation")
+        </th>
+        <th>
+            @Html.DisplayName("AverageScoreAgainst")
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Town)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.County)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Postcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateJoined)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfWins)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfLosses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AverageScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighestScoreDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighestScoreLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighestScoreAgianst)
+            </td>
+        </tr>
+        @Html.ActionLink("Go To Profile", "Details", new { id = item.MemberID })
+    }
+</table>
